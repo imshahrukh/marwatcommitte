@@ -6,6 +6,7 @@ import axios from 'axios';
 import {members} from './../../../data/members'
 import {useNavigate  } from "react-router-dom";
 import getToken from './../../../useLoginState'
+import {apiURL} from './../../apiURL'
 
 function AdminAllocateAmount(props) {
 
@@ -64,7 +65,7 @@ function AdminAllocateAmount(props) {
 
     // get the list of the village 
      useEffect(() => {
-        axios.get('http://localhost:9000/v1/member')
+        axios.get(`${apiURL}/v1/member`)
             .then(res => {
                     // get data from json
             const data = res.data.data;
@@ -98,7 +99,7 @@ function AdminAllocateAmount(props) {
         })
     },[]);
     useEffect(() => {
-            axios.get('http://localhost:9000/v1/amount')
+            axios.get(`${apiURL}/v1/amount`)
                 .then(res => {
                     // get data from json
                     const data = res.data.data;
@@ -169,11 +170,11 @@ function AdminAllocateAmount(props) {
         }
 
         
-        const url = "http://localhost:9000/v1/allocateAmount";
+        const url = `${apiURL}/v1/allocateAmount`;
         await getData(url,data);
         const temp_amount= amounts-amount;
         if(accepted===true){
-            const url = "http://localhost:9000/v1/amount/6035e2aea95ade2cf0053857";
+            const url = `${apiURL}/v1/amount/6035e2aea95ade2cf0053857`;
                 // data to update
                 const d = {
                     committe_amount: temp_amount,

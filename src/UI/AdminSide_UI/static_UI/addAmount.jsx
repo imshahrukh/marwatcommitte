@@ -6,6 +6,7 @@ import axios from 'axios';
 import {useNavigate  } from "react-router-dom";
 import getToken from './../../../useLoginState'
 import {members} from './../../../data/members'
+import {apiURL} from './../../apiURL'
 // ------------------------ steps --------------------------------
 // Inite the Hooks
 
@@ -127,7 +128,7 @@ function adminAddAmount(props) {
         }
         // get the list of the members.....
         useEffect(() => {
-            axios.get('http://localhost:9000/v1/member')
+            axios.get(`${apiURL}/v1/member`)
                 .then(res => {
                     // get data from json
                     const data = res.data.data;
@@ -151,7 +152,7 @@ function adminAddAmount(props) {
 
         },[]);
             useEffect(() => {
-            axios.get('http://localhost:9000/v1/amount')
+            axios.get(`${apiURL}/v1/amount`)
                 .then(res => {
                     // get data from json
                     const data = res.data.data;
@@ -167,7 +168,7 @@ function adminAddAmount(props) {
         },[]);
     // get All amount
         useEffect(() => {
-            axios.get('http://localhost:9000/v1/submittedAmount')
+            axios.get(`${apiURL}/v1/submittedAmount`)
                 .then(res => {
                     // get data from json
                     const data = res.data.data;
@@ -245,7 +246,7 @@ function adminAddAmount(props) {
             const temp_amount= amount+res_amount;
             if(status==="success"){
                 
-                const url = "http://localhost:9000/v1/amount/6035e2aea95ade2cf0053857";
+                const url = `${apiURL}/v1/amount/6035e2aea95ade2cf0053857`;
                 // data to update
                 const d = {
                     committe_amount: temp_amount,
@@ -269,7 +270,7 @@ function adminAddAmount(props) {
             const date = deafultYear +"-"+ month_index+"-"+ day;
 
             const data = { _id_memeber: _id, submission_date:date};
-            const url = "http://localhost:9000/v1/submittedAmount";
+            const url = `${apiURL}/v1/submittedAmount`;
             await getData(url,data)
             if(accepted===true){
                 getFinal_filterData_id(_id)

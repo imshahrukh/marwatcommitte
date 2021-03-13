@@ -5,7 +5,7 @@ import {Dropdown,DropdownButton} from 'react-bootstrap'
 import axios from 'axios';
 import {useNavigate  } from "react-router-dom";
 import getToken from './../../../useLoginState'
-
+import {apiURL} from './../../apiURL'
 function AdminAddMember(props) {
 
     // Hooks
@@ -25,7 +25,7 @@ function AdminAddMember(props) {
 
     // get the list of the village 
      useEffect(() => {
-        axios.get('http://localhost:9000/v1/member')
+        axios.get(`${apiURL}/v1/member`)
             .then(res => {
                     // get data from json
             const data = res.data.data;
@@ -87,7 +87,7 @@ function AdminAddMember(props) {
             data_of_joining:date,
             status:""
         }
-        const url = "http://localhost:9000/v1/member";
+        const url = `${apiURL}/v1/member`;
         await getData(url,data);
         if(accepted===true){
             setResult("Member Registerd...")

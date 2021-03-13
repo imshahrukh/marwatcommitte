@@ -3,7 +3,7 @@ import {Table} from 'react-bootstrap'
 import {useState,useEffect} from 'react'
 import {members} from './../../../data/members'
 import axios from 'axios';
-
+import {apiURL} from './../../apiURL'
 function Donations(props) {
 
 
@@ -16,7 +16,7 @@ function Donations(props) {
     let [final_list,setFinalList] = useState();
 
     useEffect(() => {
-        axios.get('http://localhost:9000/v1/member')
+        axios.get(`${apiURL}/v1/member`)
             .then(res => {
                     // get data from json
             const data = res.data.data;
@@ -33,7 +33,7 @@ function Donations(props) {
     },[]);
 
     useEffect(() => {
-        axios.get('http://localhost:9000/v1/allocateAmount')
+        axios.get(`${apiURL}/v1/allocateAmount`)
             .then(res => {
             const data = res.data.data;
             const mem_data = data.allocatedAmount;

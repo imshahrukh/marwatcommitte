@@ -3,9 +3,9 @@ import React from 'react';
 import {Dropdown,DropdownButton,Table,Form,Button} from 'react-bootstrap'
 import {useState,useEffect } from 'react'
 import axios from 'axios';
-import { Route,useNavigate  } from "react-router-dom";
+import {useNavigate  } from "react-router-dom";
 import getToken from './../../../useLoginState'
-
+import {apiURL} from './../../apiURL'
 import {members} from './../../../data/members'
 // ------------------------ steps --------------------------------
 // Inite the Hooks
@@ -118,7 +118,7 @@ function adminAnnualSubmittedAmount(props) {
         }
         // get the list of the members.....
         useEffect(() => {
-            axios.get('http://localhost:9000/v1/member')
+            axios.get(`${apiURL}/v1/member`)
                 .then(res => {
                     // get data from json
                     const data = res.data.data;
@@ -145,7 +145,7 @@ function adminAnnualSubmittedAmount(props) {
         },[]);
         // read the amount
          useEffect(() => {
-            axios.get('http://localhost:9000/v1/amount')
+            axios.get(`${apiURL}/v1/amount`)
                 .then(res => {
                     // get data from json
                     const data = res.data.data;
@@ -160,7 +160,7 @@ function adminAnnualSubmittedAmount(props) {
         },[]);
     // get All amount
         useEffect(() => {
-            axios.get('http://localhost:9000/v1/annualSubmittedAmount')
+            axios.get(`${apiURL}/v1/annualSubmittedAmount`)
                 .then(res => {
                     // get data from json
                     const data = res.data.data;
@@ -233,7 +233,7 @@ function adminAnnualSubmittedAmount(props) {
             
             if(status==="success"){
                 // url
-                const url = "http://localhost:9000/v1/amount/6035e2aea95ade2cf0053857";
+                const url = `${apiURL}/v1/amount/6035e2aea95ade2cf0053857`;
                 // data to update
                 const d = {
                     functions_amount: temp_amount,
@@ -258,7 +258,7 @@ function adminAnnualSubmittedAmount(props) {
             const date = deafultYear +"-"+ month_index+"-"+ day;
            
             const data = { _id_memeber: _id, submission_date:date};
-            const url = "http://localhost:9000/v1/annualSubmittedAmount";
+            const url = `${apiURL}/v1/annualSubmittedAmount`;
             await getData(url,data)
             if(accepted===true){
                 getFinal_filterData_id(_id)

@@ -3,7 +3,7 @@ import {Dropdown,DropdownButton,Table} from 'react-bootstrap'
 import {useState,useEffect} from 'react'
 import axios from 'axios';
 
-// import {submission} from './../../../data/submitted'
+import {apiURL} from './../../apiURL'
 import {members} from './../../../data/members'
 
 
@@ -87,7 +87,7 @@ function AnnualMoneyInformation(props) {
     // const [user,setUser] =useState(submission[2020].jan)
 
     useEffect(() => {
-            axios.get('http://localhost:9000/v1/member')
+            axios.get(`${apiURL}/v1/member`)
                 .then(res => {
                     // get data from json
                     const data = res.data.data;
@@ -112,7 +112,7 @@ function AnnualMoneyInformation(props) {
         },[]);
     // get All amount
         useEffect(() => {
-            axios.get('http://localhost:9000/v1/annualSubmittedAmount')
+            axios.get(`${apiURL}/v1/annualSubmittedAmount`)
                 .then(res => {
                     // get data from json
                     const data = res.data.data;

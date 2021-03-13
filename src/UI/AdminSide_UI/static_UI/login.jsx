@@ -3,7 +3,7 @@ import {useState} from 'react'
 import {Form,Button} from 'react-bootstrap'
 import { useNavigate  } from "react-router-dom";
 import axios from 'axios';
-
+import {apiURL} from './../../apiURL'
 
 function AdminLogin(props) {
 
@@ -47,7 +47,7 @@ function AdminLogin(props) {
             password:password
         }
        
-        await addFunctionAmount("http://localhost:9000/v1/login/varify",data);
+        await addFunctionAmount(`${apiURL}/v1/login/varify`,data);
         
     }
    

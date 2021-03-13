@@ -6,7 +6,7 @@ import axios from 'axios';
 import {members} from './../../../data/members'
 import {useNavigate  } from "react-router-dom";
 import getToken from './../../../useLoginState'
-
+import {apiURL} from './../../apiURL'
 function AdminUpdateMember(props) {
 
     // Hooks
@@ -54,7 +54,7 @@ function AdminUpdateMember(props) {
 
     // get the list of the village 
      useEffect(() => {
-        axios.get('http://localhost:9000/v1/member')
+        axios.get(`${apiURL}/v1/member`)
             .then(res => {
                     // get data from json
             const data = res.data.data;
@@ -137,7 +137,7 @@ function AdminUpdateMember(props) {
             personal_phon: personalNumebr,
             relative_phon: realtiveNumber,
         }
-        const url = `http://localhost:9000/v1/member/${mem[0]._id}`;
+        const url = `${apiURL}/v1/member/${mem[0]._id}`;
         // console.log(url)
         await getData(url,data);
         if(accepted===true){

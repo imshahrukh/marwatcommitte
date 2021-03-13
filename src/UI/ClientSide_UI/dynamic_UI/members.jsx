@@ -2,7 +2,7 @@ import React from 'react';
 import {Dropdown,DropdownButton,Table} from 'react-bootstrap'
 import {useState,useEffect } from 'react'
 import axios from 'axios';
-
+import {apiURL} from './../../apiURL'
 import {members} from './../../../data/members'
 // Load the data from the Member Table 
 // get the village
@@ -17,7 +17,7 @@ function Members(props) {
 
     // hooks
     useEffect(() => {
-         axios.get('http://localhost:9000/v1/member')
+         axios.get(`${apiURL}/v1/member`)
             .then(res => {
                 // get data from json
                 const data = res.data.data;
