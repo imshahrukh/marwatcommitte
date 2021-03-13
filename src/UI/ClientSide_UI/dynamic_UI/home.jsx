@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState,useEffect } from 'react'
 import axios from 'axios';
-
+import {apiURL} from './../../apiURL'
 
 // const unitsInUrdu = ["ہزار","لاکھ"];
 // const getAmountInUrdu = (amount) =>{
@@ -47,7 +47,7 @@ function Home(props) {
         const [amountAnnual,setAmountAnnual]= useState('');
         const [amountMonthly,setAmountMontly]= useState('');
          useEffect(() => {
-            axios.get('http://localhost:9000/v1/amount')
+            axios.get(`${apiURL}/v1/amount`)
                 .then(res => {
                     // get data from json
                     const data = res.data.data;
