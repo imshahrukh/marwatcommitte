@@ -1,38 +1,288 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+.urdu-p {
+  font-family: "Noto Naskh Arabic", serif;
+  font-size: 1.5em;
+  direction: rtl;
+}
+i {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
 .App {
-  text-align: center;
+  width: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top-static {
+  width: 100%;
+  height: 20vh;
+  /* border: 1px solid red; */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.welfare-contact {
+  height: 15%;
+  /* background-color: saddlebrown; */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.welfare-name-logo {
+  /* background-color: seagreen; */
+  height: 90%;
+  font-family: "Noto Naskh Arabic", serif;
+  font-size: 2em;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  display: flex;
+}
+.li {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+.li:hover {
+  list-style: none;
+  text-decoration: none;
+  color: whitesmoke;
+}
+/* Navigation */
+/* Navigation */
+/* Navigation */
+/* Navigation */
+/* Navigation */
+/* Navigation*/
+
+.li-containor {
+  background-color: rgb(171, 201, 186);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+}
+.items {
+  margin-left: 20px;
+  padding: 5px;
+  font-family: "Noto Naskh Arabic", serif;
+  font-size: 1.5em;
+}
+
+.items:hover {
+  background-color: black;
   color: white;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+/* Loading */
+.Loading {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.Loading div {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+/* body */
+/* body */
+/* body */
+/* body */
+/* body */
+/* body */
+/* body */
+
+/* Home */
+/* Home */
+/* Home */
+/* Home */
+.home {
+  justify-content: center;
+  align-items: center;
+  /* display: inline-block; */
+  display: flex;
+  height: 100%;
+  font-family: "Noto Naskh Arabic", serif;
+}
+.home div div {
+  font-family: "Noto Naskh Arabic", serif;
+  font-size: 2em;
+  margin-top: 10px;
+}
+.current_amount {
+  /* border-bottom: 3px solid black; */
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin-right: 2px;
+}
+/* Rule */
+/* Rule */
+/* Rule */
+/* Rule */
+/* Home */
+.RuleContainor {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+  overflow: scroll;
+}
+.rule {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  /* border: 1px solid red; */
+  float: right;
+  font-family: "Noto Naskh Arabic", serif;
+  font-size: 1rem;
+}
+.main-body {
+  width: 100%;
+  height: 69vh;
+  overflow: auto;
+  /* background-color: tomato; */
+}
+.sc {
+  height: auto;
+  overflow-y: auto;
+}
+.total {
+  margin-top: 2px;
+  width: 100%;
+  /* background-color: black; */
+  position: relative;
+  justify-content: flex-end;
+  align-items: flex-end;
+  display: flex;
+}
+.total span {
+  position: relative;
+  background-color: white;
+  padding: 0.8%;
+  font-family: "Noto Naskh Arabic", serif;
+  font-size: 1.5em;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.total-money {
+  margin-right: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Combo BOX */
+/* Combo BOX */
+/* Combo BOX */
+
+.comnoBox {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 15px;
+  /* z-index: 10; */
+  /* border: 1px solid red; */
+
+  /* border: 1px solid red; */
+}
+.comboScroll {
+  overflow-y: auto;
+  height: 100px;
+}
+.DropDown {
+  margin-right: 10px;
+}
+.ComboTags {
+  font-family: "Noto Naskh Arabic", serif;
+  font-size: 1.8rem;
+  margin-left: 5px;
+  margin-right: 20px;
+}
+/* Table */
+.tableContainor {
+  /* z-index: -10; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.tableHolder {
+  width: 80%;
+  height: 300px;
+  overflow-y: scroll;
+  /* height: 100vh; */
+}
+.tbs {
+  height: 200px;
+  overflow-y: scroll;
+}
+@media only screen and (max-width: 600px) {
+  .tableHolder {
+    width: 100%;
+    height: 350px;
   }
-  to {
-    transform: rotate(360deg);
+}
+.navs {
+  background-color: brown;
+  width: 100%;
+  /* height: 5.7vh; */
+}
+.mob-view {
+  display: none;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 500px) {
+  .li-containor {
+    display: none;
   }
+  .items {
+    display: none;
+  }
+  .li {
+    display: none;
+  }
+  .mob-view {
+    float: right;
+    display: block;
+  }
+  .tbs {
+    height: 400px;
+  }
+  .addAmountComboBx {
+  }
+  .tag {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 1px;
+    padding: 1px;
+  }
+  .ComboTags {
+    margin: 1px;
+    padding: 1px;
+  }
+  .comnoBox {
+    margin-bottom: 5px;
+  }
+}
+
+/* Admin */
+/* Login Form */
+
+.center-loginForm {
+  width: 70vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.l-form {
+  border: 3px solid black;
+  padding: 5%;
+  border-radius: 15px;
+}
+.picHolder {
+  height: 100px;
+  width: 100px;
+}
+.picHolder img {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
