@@ -67,7 +67,7 @@ function Navigation(props) {
                     }} href="/rule">اصول</Dropdown.Item>
                     <Dropdown.Item onClick = {()=>{
                         updateLink('سالانہ تقریب  فنڈ ');
-                    }} href="/annualSubmittedAmount">اصول</Dropdown.Item>
+                    }} href="/annualSubmittedAmount">سالانہ تقریب  فنڈ </Dropdown.Item>
                     <Dropdown.Item onClick = {()=>{
                         updateLink('لوگن');
                     }} href="/login">لوگن</Dropdown.Item>
