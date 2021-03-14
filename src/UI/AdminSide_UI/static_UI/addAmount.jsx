@@ -315,7 +315,7 @@ function adminAddAmount(props) {
                     }}>{name}</Dropdown.Item>
                 )}   
                 </DropdownButton>
-
+                    
                 <p className="ComboTags tag">محلہ</p>
                 
             </div>

@@ -141,7 +141,11 @@ function AdminAllocateAmount(props) {
         setReturnApplied(val)
     }
 
-  
+    const checked = ()=>{
+        setName("Other");
+        setVillage ("Other");
+        console.log("test")
+    }
       const getData = async (url,sub_Data) =>{
         let res = await axios.post(url,sub_Data);
         let {status} = res.data;
@@ -212,6 +216,16 @@ function AdminAllocateAmount(props) {
                     )}   
                     </DropdownButton>
                 </Form.Group>
+
+
+                 <Form.Group controlId="formBasicCheckbox">
+                        <Form.Check onChange={()=>{
+                            checked();
+                        }} type="checkbox" label="Other" />
+                </Form.Group>
+
+
+
                     {/* Name */}
                 <Form.Group>
                     <Form.Label>Name</Form.Label>
