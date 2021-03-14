@@ -1,10 +1,11 @@
 import React from 'react';
-
+import rules from './ruleImage.jpg'
 
 function Rules() {
+    
     return (
         <div className="RuleContainor">
-            <div className="rule"><span>Rule</span> <span>-  1</span></div>
+            <div className="rule"> <img src={rules} alt="rules" /></div>
         </div>
     );
 }

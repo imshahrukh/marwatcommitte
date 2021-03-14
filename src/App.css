@@ -134,6 +134,7 @@ ul {
   float: right;
   font-family: "Noto Naskh Arabic", serif;
   font-size: 1rem;
+  width: 70%;
 }
 .main-body {
   width: 100%;
