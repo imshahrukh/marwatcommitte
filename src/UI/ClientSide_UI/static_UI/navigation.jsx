@@ -21,11 +21,11 @@ function Navigation(props) {
                  </li>
                  <li className="items">
                   <Link className="li" to="/annualSubmittedAmount">
-                      پارٹی فنڈ
+                      سالانہ تقریب  فنڈ 
                   </Link>
                  </li>
                  <li className="items"><Link className="li" to="/rule">
-                      اصول
+                      اصول 
                   </Link></li>
                  <li className="items"><Link className="li" to="/members">
                       ممبران
@@ -65,6 +65,9 @@ function Navigation(props) {
                     <Dropdown.Item onClick = {()=>{
                         updateLink('اصول');
                     }} href="/rule">اصول</Dropdown.Item>
+                    <Dropdown.Item onClick = {()=>{
+                        updateLink('سالانہ تقریب  فنڈ ');
+                    }} href="/annualSubmittedAmount">اصول</Dropdown.Item>
                     <Dropdown.Item onClick = {()=>{
                         updateLink('لوگن');
                     }} href="/login">لوگن</Dropdown.Item>
