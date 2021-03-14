@@ -68,7 +68,7 @@ function CommitHeads(props) {
                        
                         <td style={{textAlign:'right'}}>0313-55555555</td>
 
-                        <td style={{textAlign:'right'}}>عمر علی</td>
+                        <td style={{textAlign:'right'}}> تاجہ زئی</td>
                         <td style={{textAlign:'right'}}>اختر منیر خان</td>
                          <td style={{textAlign:'right'}}>2</td>
                         </tr>
