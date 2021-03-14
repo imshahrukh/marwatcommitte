@@ -1,5 +1,5 @@
 import React from 'react';
-import rules from './ruleImage.jpg'
+import rules from './ruleImage.JPG'
 
 function Rules() {
     
