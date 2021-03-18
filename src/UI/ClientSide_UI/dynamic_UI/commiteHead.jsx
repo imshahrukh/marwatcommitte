@@ -32,7 +32,7 @@ function CommitHeads(props) {
                             </div>
                         </td>
                         <td style={{textAlign:'right'}}>صدر </td>
-                        <td style={{textAlign:'right'}}>0330-527505</td>
+                        <td style={{textAlign:'right'}}>0330-5270509</td>
                         <td style={{textAlign:'right'}}>دلوخیل</td>
                         <td style={{textAlign:'right'}}> فضل الرحمن</td>
                          <td style={{textAlign:'right'}}>1</td>
